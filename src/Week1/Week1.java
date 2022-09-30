@@ -19,5 +19,19 @@ public class Week1
 
         String name = InputReader.getString("Enter your name > ");
         System.out.println("Hello " + name);
-    } 
+
+        calculateRectangle();
+    }
+
+    public static void calculateRectangle()
+    {
+        int length;
+        int height = 10;
+        int area;
+
+        System.out.println("Calculate Area");
+        length = InputReader.getInt("Please enter length >");
+
+        area = length * height;
+    }
 }
