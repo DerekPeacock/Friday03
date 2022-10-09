@@ -27,11 +27,10 @@ public class Week1
     {
         int length;
         int height = 10;
-        int area;
 
         System.out.println("Calculate Area");
         length = InputReader.getInt("Please enter length >");
 
-        area = length * height;
+        int area = length * height;
     }
 }

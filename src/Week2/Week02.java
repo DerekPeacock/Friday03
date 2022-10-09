@@ -1,11 +1,11 @@
 package Week2;
+import helpers.ConsoleColours;
 
 public class Week02 
 {
-    public static final String CONSOLE_CLEAR = "\033[H\033[2J";
     public static void main(String[] args)
     {
-        System.out.println(CONSOLE_CLEAR);
+        System.out.println(ConsoleColours.CONSOLE_CLEAR);
 
         System.out.println("==================================");
         System.out.println("CO452 Programming Concepts 2022/23");
@@ -15,5 +15,21 @@ public class Week02
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
+
+        do7TimesTable();
+    }
+
+    /**
+     * This method will proint out the 7 times table
+     */
+    private static void do7TimesTable() 
+    {
+        int product;
+
+        for(int value = 1; value <= 12; value++ )
+        {
+            product = value * 7;
+            System.out.println("Product = " + product);
+        }
     }     
 }
