@@ -5,30 +5,16 @@ public class App
 {
     public static void main(String[] args) throws Exception 
     {
-        printHeading(" CO452 Programming Concepts 2022/23");
+        System.out.println(ConsoleColours.CONSOLE_CLEAR);
+        
+        printHeading();
         
         executeMenuChoice();
     }
 
-    private static void printHeading(String title) 
-    {
-        System.out.println(ConsoleColours.ANSI_BRIGHT_BG_BLUE);
-        System.out.println(ConsoleColours.CONSOLE_CLEAR);
-
-        System.out.println(" ==================================");
-        System.out.println(title);
-        System.out.println(" ==================================");
-        System.out.println();
-        System.out.println(" by Nicholas Day and Derek Peacock");
-        System.out.println();
-
-    }
-
-    private static void executeMenuChoice()
+        private static void executeMenuChoice()
     {
         boolean appIsRunning = true;
-
-        printHeading(" My Brilliant Songs App");
 
         while(appIsRunning == true)
         {
@@ -47,19 +33,20 @@ public class App
 
     private static int getMenuChoice()
     {
+        printTitle(" My Brilliant Songs App");
+
         int choice = 0;
         boolean isValid = false;
 
         while(isValid == false)
         {
-            System.out.println("\n Please select your choice > ");
-            System.out.println("\n 1. Add Song");
+            System.out.println(" 1. Add Song");
             System.out.println(" 2. Delete Song");
             System.out.println(" 3. Print All Songs");
             System.out.println(" 4. Print Popular Songs");
-            System.out.println(" 5. Quit\n");
+            System.out.println(" 5. Quit");
 
-            choice = InputReader.getInt("Please enter your choice (1 to 5) > ");
+            choice = InputReader.getInt("\n Please enter your choice (1 to 5) > ");
             
             if(choice < 1 || choice > 5)
             {
@@ -71,27 +58,48 @@ public class App
         return choice;
     }
 
+    private static void printHeading() 
+    {
+        //System.out.println(ConsoleColours.ANSI_BRIGHT_BG_BLUE);
+
+        System.out.println(" ===================================");
+        System.out.println(" CO452 Prograsmming Concepts 2022-23");
+        System.out.println(" ===================================");
+        System.out.println();
+        System.out.println(" by Nicholas Day and Derek Peacock");
+    }
+
+    private static void printTitle(String title)
+    {
+        //System.out.println(ConsoleColours.ANSI_BRIGHT_WHITE);        
+        System.out.println();
+        System.out.println(title);
+        System.out.println(" -----------------");
+        System.out.println();
+        //System.out.println(ConsoleColours.ANSI_BRIGHT_BLACK);        
+    }
+
     private static void printPopSongs() 
     {
         // TODO
-        System.out.println("\n\n Print Popular Songs \n");
+        printTitle(" Print Popular Songs");
     }
 
     private static void printAllSongs() 
     {
         // TODO
-        System.out.println("\n\n Print All Songs \n");
+        printTitle(" Print All Songs");
     }
 
     private static void deleteSong() 
     {
         // TODO
-        System.out.println("\n\n Delete Old Song \n");
+        printTitle("\n\n Delete Old Song");
     }
 
     private static void addSong() 
     {
         // TODO
-        System.out.println("\n\n Add New Song \n");
+        printTitle("\n\n Add New Song");
     }
 }
