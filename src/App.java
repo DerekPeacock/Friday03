@@ -12,7 +12,7 @@ public class App
         executeMenuChoice();
     }
 
-        private static void executeMenuChoice()
+    private static void executeMenuChoice()
     {
         boolean appIsRunning = true;
 
