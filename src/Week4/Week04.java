@@ -17,6 +17,8 @@ public class Week04
         System.out.println();
         System.out.println(" by Derek Peacock");
         System.out.println();
+
+        executeMenuChoice();
     }
     
     private static void executeMenuChoice()

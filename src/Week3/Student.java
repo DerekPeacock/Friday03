@@ -13,6 +13,6 @@ public class Student
 
     public void print()
     {
-        System.out.println(id + " " + fullName);
+        System.out.println(" \nStudent " + id + " " + fullName);
     }
 }
