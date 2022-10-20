@@ -16,6 +16,16 @@ public class Week04
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
-    }     
+    }
+    
+    public static void executeMenu()
+    {
+
+    }
+
+    public static void displayMenu()
+    {
+        
+    }
     
 }

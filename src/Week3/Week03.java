@@ -20,14 +20,16 @@ public class Week03
 
         createStudent();
     }
-    private static void createStudent() 
+    public static Student createStudent() 
     {
-        System.out.println();
-        String id = InputReader.getString("Please enter your id > ");
-        String name = InputReader.getString("Please enter your name > ");
+        System.out.println("\n Creating new student\n");
+        String id = InputReader.getString("Please enter your student id > ");
+        String name = InputReader.getString("Please enter your student name > ");
         
-        Student derek = new Student(id, name);
-        derek.print();
+        Student student = new Student(id, name);
+        student.print();
+
+        return student;
     }     
     
 }
